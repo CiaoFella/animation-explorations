@@ -25,6 +25,11 @@ function copyFeaturesPlugin() {
 
 export default defineConfig({
   plugins: [eslint({ cache: false }), copyFeaturesPlugin()],
+  server: {
+    port: 2345,
+    open: true,
+    host: true,
+  },
   build: {
     minify: true,
     manifest: true,

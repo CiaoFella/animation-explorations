@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import eslint from 'vite-plugin-eslint'
 import fs from 'fs-extra'
 import path from 'path'
 
@@ -24,7 +23,7 @@ function copyFeaturesPlugin() {
 }
 
 export default defineConfig({
-  plugins: [eslint({ cache: false }), copyFeaturesPlugin()],
+  plugins: [copyFeaturesPlugin()],
   server: {
     port: 2345,
     open: true,

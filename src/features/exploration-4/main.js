@@ -2,6 +2,7 @@ import { bottomSideClipPath, fullClipPath, leftSideClipPath, rightSideClipPath }
 
 window.addEventListener('load', () => {
   const targetVisual = document.querySelector('[anm-intro=target-visual]')
+
   const svgs = document.querySelectorAll('[anm-intro=svg]')
   const svgChars = [...svgs].map((svg) => svg.children)
 

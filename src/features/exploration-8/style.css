@@ -1,0 +1,64 @@
+/* Main container */
+.virus-reveal-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* SVG container that will hold our virus effect */
+.virus-svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* The text that will be revealed by the virus animation */
+.virus-reveal-text {
+  position: relative;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #e63946;
+  z-index: 1;
+  letter-spacing: 0.05em;
+  transform: scale(1);
+  will-change: transform;
+  opacity: 0.95;
+  filter: blur(0.3px);
+  text-shadow: 0 0 30px rgba(230, 57, 70, 0.6);
+}
+
+/* General styling for the SVG */
+.virus-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Additional styling for the virus tendrils */
+.virus-tendril {
+  stroke: #e63946;
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .virus-reveal-text {
+    font-size: 3rem;
+  }
+}
